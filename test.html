@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				height: 100px;
+				width: 100px;
+				margin: 10px;
+				font-size: 15px;
+				background: red;
+				border: 10px solid blue;
+			}
+		</style>
+		<script src="move.js"></script>
+	</head>
+	<body>
+		<div>AAA</div>
+		<div>BBB</div>
+		<div>CCC</div>
+		<div>DDD</div>
+		
+		<script type="text/javascript">
+			let aDiv = document.getElementsByTagName('div')
+			let timer
+			
+			aDiv[0].onmouseover = function () {
+				move(this,'width',200)
+			}
+			aDiv[0].onmouseout = function () {
+				move(this,'width',100)
+			}
+			aDiv[1].onmouseover = function () {
+				move(this,'height',200)
+			}
+			aDiv[1].onmouseout = function () {
+				move(this,'height',100)
+			}
+			aDiv[2].onmouseover = function () {
+				move(this,'font-size',40)
+			}
+			aDiv[2].onmouseout = function () {
+				move(this,'font-size',15)
+			}
+			aDiv[3].onmouseover = function () {
+				move(this,'border-width',40)
+			}
+			aDiv[3].onmouseout = function () {
+				move(this,'border-width',10)
+			}
+			
+		</script>
+	</body>
+</html>
