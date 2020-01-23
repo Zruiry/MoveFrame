@@ -28,14 +28,18 @@
 			aDiv[0].onmouseover = function() {
 				move(this, 'width', 200, function() {
 					move(aDiv[0], 'height', 200, function() {
-						move(aDiv[0], 'opacity', 40)
+						move(aDiv[0], 'opacity', 40, function() {
+							move(aDiv[0], 'background', 'black')
+						})
 					})
 				})
 			}
 			aDiv[0].onmouseout = function() {
 				move(this, 'width', 100, function() {
 					move(aDiv[0], 'height', 100, function() {
-						move(aDiv[0], 'opacity', 100)
+						move(aDiv[0], 'opacity', 100, function() {
+							move(aDiv[0], 'background', 'red')
+						})
 					})
 				})
 			}
